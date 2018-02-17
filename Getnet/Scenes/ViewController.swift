@@ -63,25 +63,43 @@ class ViewController: UIViewController {
         let planeZposition = transform.columns.3.z
         portalNode.position =  SCNVector3(planeXposition, planeYposition, planeZposition)
         sceneView.scene.rootNode.addChildNode(portalNode)
-        addPlane(nodeName: "roof", portalNode: portalNode, imageName: "top")
-        addPlane(nodeName: "floor", portalNode: portalNode, imageName: "bottom")
-        addWalls(nodeName: "backWall", portalNode: portalNode, imageName: "back")
-        addWalls(nodeName: "sideWallA", portalNode: portalNode, imageName: "sideA")
-        addWalls(nodeName: "sideWallB", portalNode: portalNode, imageName: "sideB")
-        addWalls(nodeName: "sideDoorA", portalNode: portalNode, imageName: "sideDoorA")
-        addWalls(nodeName: "sideDoorB", portalNode: portalNode, imageName: "sideDoorB")
+        setupMaskProperties(rootNode: portalNode)
+//        addPlane(nodeName: "roof", portalNode: portalNode, imageName: "top")
+//        addPlane(nodeName: "floor", portalNode: portalNode, imageName: "bottom")
+//        addWalls(nodeName: "backWall", portalNode: portalNode, imageName: "back")
+//        addWalls(nodeName: "sideWallA", portalNode: portalNode, imageName: "sideA")
+//        addWalls(nodeName: "sideWallB", portalNode: portalNode, imageName: "sideB")
+//        addWalls(nodeName: "sideDoorA", portalNode: portalNode, imageName: "sideDoorA")
+//        addWalls(nodeName: "sideDoorB", portalNode: portalNode, imageName: "sideDoorB")
     }
     
-    func addWalls(nodeName: String, portalNode: SCNNode, imageName: String) {
-        let child = portalNode.childNode(withName: nodeName, recursively: true)
-        child?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "Art.scnassets/\(imageName).png")
+    func setupMaskProperties(rootNode: SCNNode) {
+        for node in rootNode.childNodes {
+            if node.name != "mask" {
+                node.renderingOrder = 200
+            }
+            if let child = node.childNode(withName: "mask", recursively: false) {
+                child.geometry?.firstMaterial?.transparency = 0.000001
+
+            }
+        }
     }
     
-    
-    func addPlane(nodeName: String, portalNode: SCNNode, imageName: String) {
-        let child = portalNode.childNode(withName: nodeName, recursively: true)
-        child?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "Art.scnassets/\(imageName).png")
-    }
+//    func addWalls(nodeName: String, portalNode: SCNNode, imageName: String) {
+//        let child = portalNode.childNode(withName: nodeName, recursively: true)
+//        child?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "Art.scnassets/\(imageName).png")
+//        child?.renderingOrder = 200
+//        if let mask = child?.childNode(withName: "mask", recursively: false) {
+//            mask.geometry?.firstMaterial?.transparency = 0.000001
+//        }
+//    }
+//    
+//    
+//    func addPlane(nodeName: String, portalNode: SCNNode, imageName: String) {
+//        let child = portalNode.childNode(withName: nodeName, recursively: true)
+//        child?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "Art.scnassets/\(imageName).png")
+//        child?.renderingOrder = 200
+//    }
     
     
     // MARK: - IBACTION

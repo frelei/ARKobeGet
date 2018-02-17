@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Getnet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-fN-5Lb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-fN-5Lb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-WY-KeP">
-                                <rect key="frame" x="355" y="672" width="44" height="44"/>
+                                <rect key="frame" x="316" y="714" width="44" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.526215889084507" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ipc-fH-YCX"/>
@@ -37,7 +36,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-Dn-Hvt">
-                                <rect key="frame" x="56" y="45" width="303" height="21"/>
+                                <rect key="frame" x="56" y="69" width="264" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="vc4-cD-BfP"/>
                                 </constraints>
@@ -52,10 +51,30 @@
                             <constraint firstItem="gjX-WY-KeP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="CKJ-Id-Lrk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ta5-Dn-Hvt" secondAttribute="trailing" constant="55" id="Enw-2L-nHk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gjX-WY-KeP" secondAttribute="bottom" constant="20" id="F7n-Xp-ps2"/>
+                            <constraint firstItem="ilM-fN-5Lb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MSw-c2-EI3"/>
+                            <constraint firstItem="ilM-fN-5Lb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="h6Q-r8-F0z"/>
                             <constraint firstItem="Ta5-Dn-Hvt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="rqo-bQ-dpR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ilM-fN-5Lb" secondAttribute="trailing" id="xYh-JA-DsO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="ilM-fN-5Lb" secondAttribute="top" constant="44" id="ycb-yo-9TB"/>
                             <constraint firstItem="Ta5-Dn-Hvt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="zLp-2x-Y4L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MSw-c2-EI3"/>
+                                <exclude reference="h6Q-r8-F0z"/>
+                                <exclude reference="xYh-JA-DsO"/>
+                                <exclude reference="ycb-yo-9TB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="MSw-c2-EI3"/>
+                                <include reference="h6Q-r8-F0z"/>
+                                <include reference="xYh-JA-DsO"/>
+                                <include reference="ycb-yo-9TB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="planeDectedLabel" destination="Ta5-Dn-Hvt" id="yuj-kq-ur6"/>
@@ -64,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="132.06521739130434"/>
+            <point key="canvasLocation" x="135.19999999999999" y="131.52709359605913"/>
         </scene>
     </scenes>
 </document>
