@@ -18,15 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-fN-5Lb">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-fN-5Lb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-WY-KeP">
-                                <rect key="frame" x="350" y="672" width="44" height="44"/>
+                                <rect key="frame" x="355" y="672" width="44" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.526215889084507" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="QLx-pi-KlZ"/>
-                                    <constraint firstAttribute="height" constant="44" id="kG3-wt-Oxh"/>
+                                    <constraint firstAttribute="height" constant="44" id="ipc-fH-YCX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="oUU-ws-gXD"/>
                                 </constraints>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.526215889084507" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,9 +36,11 @@
                                     <action selector="didTouchResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yCl-ca-pgK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plane Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-Dn-Hvt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-Dn-Hvt">
                                 <rect key="frame" x="56" y="45" width="303" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vc4-cD-BfP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,12 +48,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ilM-fN-5Lb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="05M-1K-2LP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ilM-fN-5Lb" secondAttribute="bottom" id="Sj8-It-6hG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ilM-fN-5Lb" secondAttribute="trailing" id="XNO-av-U8t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gjX-WY-KeP" secondAttribute="bottom" constant="20" id="njE-Zx-P9X"/>
-                            <constraint firstItem="ilM-fN-5Lb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="rkW-iD-6Qu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gjX-WY-KeP" secondAttribute="trailing" constant="20" id="x1W-nv-ukd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gjX-WY-KeP" secondAttribute="trailing" constant="15" id="62K-Fj-19s"/>
+                            <constraint firstItem="gjX-WY-KeP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="CKJ-Id-Lrk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ta5-Dn-Hvt" secondAttribute="trailing" constant="55" id="Enw-2L-nHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gjX-WY-KeP" secondAttribute="bottom" constant="20" id="F7n-Xp-ps2"/>
+                            <constraint firstItem="Ta5-Dn-Hvt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="rqo-bQ-dpR"/>
+                            <constraint firstItem="Ta5-Dn-Hvt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="zLp-2x-Y4L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
