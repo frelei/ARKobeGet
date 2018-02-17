@@ -55,7 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="PlaneDectedLabel" destination="Ta5-Dn-Hvt" id="FNy-d6-j2J"/>
+                        <outlet property="planeDectedLabel" destination="Ta5-Dn-Hvt" id="yuj-kq-ur6"/>
                         <outlet property="sceneView" destination="ilM-fN-5Lb" id="jQx-Kf-W2M"/>
                     </connections>
                 </viewController>
