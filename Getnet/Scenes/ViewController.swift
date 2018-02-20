@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     }
     
     func addPortal(hitTestResult: ARHitTestResult) {
-        let portalScene = SCNScene(named: "Art.scnassets/Portal.scn")
+        let portalScene = SCNScene(named: "Store.scnassets/Portal.scn")
         let portalNode = portalScene!.rootNode.childNode(withName: "Portal", recursively: false)!
         let transform = hitTestResult.worldTransform
         let planeXposition = transform.columns.3.x
@@ -83,10 +83,10 @@ class ViewController: UIViewController {
 
             }
         }
-        let shopRootNode = rootNode.childNode(withName: "Shop reference", recursively: false)
-        for node in (shopRootNode?.childNodes.first?.childNodes)! {
-                node.renderingOrder = 200
-        }
+//        let shopRootNode = rootNode.childNode(withName: "Shop reference", recursively: false)
+//        for node in (shopRootNode?.childNodes.first?.childNodes)! {
+//                node.renderingOrder = 200
+//        }
         
     }
     
