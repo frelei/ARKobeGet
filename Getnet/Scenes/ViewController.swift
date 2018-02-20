@@ -83,6 +83,11 @@ class ViewController: UIViewController {
 
             }
         }
+        let shopRootNode = rootNode.childNode(withName: "Shop reference", recursively: false)
+        for node in (shopRootNode?.childNodes.first?.childNodes)! {
+                node.renderingOrder = 200
+        }
+        
     }
     
 //    func addWalls(nodeName: String, portalNode: SCNNode, imageName: String) {
