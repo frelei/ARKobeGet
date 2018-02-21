@@ -55,8 +55,8 @@ class ViewController: UIViewController {
     }
     
     func addPortal(hitTestResult: ARHitTestResult) {
-        let portalScene = SCNScene(named: "Store.scnassets/Portal.scn")
-        let portalNode = portalScene!.rootNode.childNode(withName: "Portal", recursively: false)!
+        let portalScene = SCNScene(named: "Store.scnassets/Shopper.scn")
+        let portalNode = portalScene!.rootNode.childNode(withName: "Root", recursively: false)!
         let transform = hitTestResult.worldTransform
         let planeXposition = transform.columns.3.x
         let planeYposition = transform.columns.3.y
@@ -74,16 +74,19 @@ class ViewController: UIViewController {
     }
     
     func setupMaskProperties(rootNode: SCNNode) {
+        
         for node in rootNode.childNodes {
             if node.name != "mask" {
                 node.renderingOrder = 200
-            }
-            if let child = node.childNode(withName: "mask", recursively: false) {
-                child.geometry?.firstMaterial?.transparency = 0.000001
+            } else {
+                node.geometry?.firstMaterial?.transparency = 0.000001
 
             }
+//            if let child = node.childNode(withName: "mask", recursively: false) {
+//                child.geometry?.firstMaterial?.transparency = 0.000001
+//            }
         }
-//        let shopRootNode = rootNode.childNode(withName: "Shop reference", recursively: false)
+//        let shopRootNode = rootNode.childNode(withName: "Shopper reference", recursively: false)
 //        for node in (shopRootNode?.childNodes.first?.childNodes)! {
 //                node.renderingOrder = 200
 //        }
