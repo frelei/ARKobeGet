@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B348DD2203CB554003FF666 /* Store.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B348DD1203CB554003FF666 /* Store.scnassets */; };
+		5B6D175B205876B800305581 /* TV.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D175A205876B800305581 /* TV.scnassets */; };
 		5B975E922038800000D4B754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B975E912038800000D4B754 /* AppDelegate.swift */; };
 		5B975E942038800000D4B754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B975E932038800000D4B754 /* ViewController.swift */; };
 		5B975E972038800000D4B754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B975E952038800000D4B754 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5B348DD1203CB554003FF666 /* Store.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Store.scnassets; sourceTree = "<group>"; };
+		5B6D175A205876B800305581 /* TV.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = TV.scnassets; sourceTree = "<group>"; };
 		5B975E8E2038800000D4B754 /* Getnet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Getnet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B975E912038800000D4B754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B975E932038800000D4B754 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				5BDA94742038866D005F05C0 /* Art.scnassets */,
 				5BDA94762038982B005F05C0 /* Shop.scnassets */,
 				5B348DD1203CB554003FF666 /* Store.scnassets */,
+				5B6D175A205876B800305581 /* TV.scnassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6D175B205876B800305581 /* TV.scnassets in Resources */,
 				5B975E9C2038800000D4B754 /* LaunchScreen.storyboard in Resources */,
 				5BDA94752038866D005F05C0 /* Art.scnassets in Resources */,
 				5B975E992038800000D4B754 /* Assets.xcassets in Resources */,
