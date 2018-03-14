@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         let transform = hitTestResult.worldTransform
         let planeXposition = transform.columns.3.x
         let planeYposition = transform.columns.3.y
-        let planeZposition = transform.columns.3.z - 1.5
+        let planeZposition = transform.columns.3.z - 2.0
         portalNode.position =  SCNVector3(planeXposition, planeYposition, planeZposition)
         sceneView.scene.rootNode.addChildNode(portalNode)
         setupMaskProperties(rootNode: portalNode)
