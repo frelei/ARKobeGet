@@ -55,12 +55,12 @@ class ViewController: UIViewController {
     }
     
     func addPortal(hitTestResult: ARHitTestResult) {
-        let portalScene = SCNScene(named: "Store.scnassets/Shopper.scn")
+        let portalScene = SCNScene(named: "TV.scnassets/Room.scn")
         let portalNode = portalScene!.rootNode.childNode(withName: "Root", recursively: false)!
         let transform = hitTestResult.worldTransform
         let planeXposition = transform.columns.3.x
         let planeYposition = transform.columns.3.y
-        let planeZposition = transform.columns.3.z
+        let planeZposition = transform.columns.3.z - 2
         portalNode.position =  SCNVector3(planeXposition, planeYposition, planeZposition)
         sceneView.scene.rootNode.addChildNode(portalNode)
         setupMaskProperties(rootNode: portalNode)
